@@ -28,3 +28,13 @@ boxInStack_t* stack_pop(boxInStack_t* currentBox)
     //free(currentBox);
     return previous;
 }
+
+void free_stack(boxInStack_t* stack_top)
+{
+    boxInStack_t* temp;
+    while(stack_top != NULL){
+        temp = stack_top;
+        stack_top = stack_top->previous;
+        free(temp);
+    }
+}

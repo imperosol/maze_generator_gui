@@ -9,5 +9,6 @@
 
 boxInStack_t* stack_push(box_t* currentBox, boxInStack_t* previousStackElement, const int* position);
 boxInStack_t* stack_pop(boxInStack_t* currentBox);
+void free_stack(boxInStack_t* stack_top);
 
 #endif //MAZE_GENERATOR_MAZE_STACK_H

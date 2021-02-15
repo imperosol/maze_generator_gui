@@ -6,8 +6,8 @@
 #define MAZE_GENERATOR_STRUCT_H
 
 #include <stdbool.h>
-#define LINE 20
-#define COLUMN 40
+#define LINE 50
+#define COLUMN 50
 typedef enum {
     TOP, RIGHT, BOTTOM, LEFT
 } boxWall_e;
@@ -33,4 +33,9 @@ struct boxInStack_t{
     int position[2];
 };
 
+typedef struct {
+    int position[2];
+    int distanceFromEntrance;
+    boxWall_e exitWall;
+}exitBox_t;
 #endif //MAZE_GENERATOR_STRUCT_H
